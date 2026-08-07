@@ -83,6 +83,9 @@ class MergeFrame(customtkinter.CTkFrame):
         )
         self.txt_output.pack(side="left", fill="x", expand=True, padx=5, pady=10)
         
+        # Bind Enter key to shift focus to the next widget
+        self.txt_output.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
+        
         self.btn_browse = customtkinter.CTkButton(
             self.out_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_output
         )
@@ -249,6 +252,9 @@ class SplitFrame(customtkinter.CTkFrame):
         self.txt_file = customtkinter.CTkEntry(self.file_frame, placeholder_text="Path to the PDF file to split")
         self.txt_file.pack(side="left", fill="x", expand=True, padx=5, pady=10)
         
+        # Bind Enter key to shift focus
+        self.txt_file.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
+        
         self.btn_file_browse = customtkinter.CTkButton(
             self.file_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_input
         )
@@ -275,6 +281,9 @@ class SplitFrame(customtkinter.CTkFrame):
         )
         self.txt_ranges.pack(fill="x", padx=10, pady=5)
         
+        # Bind Enter key
+        self.txt_ranges.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
+        
         # Output File path selection
         self.out_range_frame = customtkinter.CTkFrame(self.tab_range, fg_color="transparent")
         self.out_range_frame.pack(fill="x", padx=5, pady=10)
@@ -284,6 +293,9 @@ class SplitFrame(customtkinter.CTkFrame):
         
         self.txt_out_range = customtkinter.CTkEntry(self.out_range_frame, placeholder_text="Path for saving extracted PDF")
         self.txt_out_range.pack(side="left", fill="x", expand=True, padx=5)
+        
+        # Bind Enter key
+        self.txt_out_range.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
         
         self.btn_out_range_browse = customtkinter.CTkButton(
             self.out_range_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_range_output
@@ -309,6 +321,9 @@ class SplitFrame(customtkinter.CTkFrame):
         
         self.txt_dir = customtkinter.CTkEntry(self.dir_frame, placeholder_text="Directory path to save split page files")
         self.txt_dir.pack(side="left", fill="x", expand=True, padx=5)
+        
+        # Bind Enter key
+        self.txt_dir.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
         
         self.btn_dir_browse = customtkinter.CTkButton(
             self.dir_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_dir_output
@@ -443,6 +458,9 @@ class RotateFrame(customtkinter.CTkFrame):
         self.txt_file = customtkinter.CTkEntry(self.file_frame, placeholder_text="Path to the PDF file to rotate")
         self.txt_file.pack(side="left", fill="x", expand=True, padx=5, pady=10)
         
+        # Bind Enter key
+        self.txt_file.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
+        
         self.btn_file_browse = customtkinter.CTkButton(
             self.file_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_input
         )
@@ -468,6 +486,9 @@ class RotateFrame(customtkinter.CTkFrame):
         
         self.txt_out = customtkinter.CTkEntry(self.out_frame, placeholder_text="Output rotated PDF path")
         self.txt_out.pack(side="left", fill="x", expand=True, padx=5, pady=10)
+        
+        # Bind Enter key
+        self.txt_out.bind("<Return>", lambda e: e.widget.tk_focusNext().focus())
         
         self.btn_out_browse = customtkinter.CTkButton(
             self.out_frame, text="Browse", width=80, fg_color=PRIMARY_PURPLE, hover_color=HOVER_PURPLE, command=self.browse_output
