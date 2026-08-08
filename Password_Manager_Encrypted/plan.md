@@ -22,3 +22,22 @@ A highly secure, offline password manager featuring Master Password entry, crypt
   - Implement search logic, clipboard copy, and auto-clear timer.
 - **Milestone 5: Security Lockout & Release Packaging**
   - Build lockout system and compile using PyInstaller.
+
+## 4. Technical Stack
+- **GUI Framework**: `CustomTkinter`
+- **Database**: `sqlite3`
+- **Crypto Library**: `cryptography`
+- **Clipboard Utility**: `pyperclip`
+
+## 5. Database Schema Structure
+- `config` table:
+  - `id` (INTEGER PRIMARY KEY)
+  - `salt` (BLOB) - Salt used for PBKDF2HMAC
+  - `verifier` (BLOB) - Encrypted verification token to check master password
+- `credentials` table:
+  - `id` (INTEGER PRIMARY KEY)
+  - `site_name` (TEXT)
+  - `username` (TEXT)
+  - `encrypted_password` (BLOB)
+  - `category` (TEXT)
+  - `created_at` (TIMESTAMP)
