@@ -41,3 +41,12 @@ A highly secure, offline password manager featuring Master Password entry, crypt
   - `encrypted_password` (BLOB)
   - `category` (TEXT)
   - `created_at` (TIMESTAMP)
+
+## 6. UI/UX Style Guide
+- **Branding Color Palette**:
+  - Background: Cyber Black (`#0B0F19`)
+  - Primary Accent: Cobalt Blue (`#2563EB`)
+  - Alerts/Warning: Crimson Red (`#EF4444`)
+- **Key Interface Views**:
+  - **Auth Window**: Minimalist login form with password show/hide button and validation indicator.
+  - **Vault Window**: Left-aligned navigation panel for quick search filters and right-pane credentials table showing copyable text boxes.
