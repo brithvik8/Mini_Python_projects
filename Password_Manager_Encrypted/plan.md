@@ -50,3 +50,8 @@ A highly secure, offline password manager featuring Master Password entry, crypt
 - **Key Interface Views**:
   - **Auth Window**: Minimalist login form with password show/hide button and validation indicator.
   - **Vault Window**: Left-aligned navigation panel for quick search filters and right-pane credentials table showing copyable text boxes.
+
+## 7. Security Architecture & Threat Vectors
+- **Zero-Knowledge Design**: The derived decryption key is never stored locally on disk. It is stored solely in memory while the application session is active and wiped immediately on exit.
+- **Brute Force Defense**: The master login attempts are validated against a local lockout limit. If exceeded, a progressive delay (e.g. 5s, 10s, 30s) is enforced before processing the next attempt.
+- **Clipboard Auto-Clear**: Copied credentials are automatically cleared from the operating system's clipboard memory after 30 seconds using a background thread observer.
