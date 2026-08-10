@@ -16,3 +16,13 @@ A modern, highly accurate utility desktop clock application built in Python, fea
   - Design visual clock faces, alarm cards, and tab navigations.
 - **Milestone 5: System Tray & Floating Overlay Overlay**
   - Add minimize-to-tray pystray logic and always-on-top window configurations.
+
+## 3. Technical Stack
+- **GUI Engine**: `CustomTkinter`
+- **Audio Output Mixer**: `pygame.mixer` (runs asynchronously)
+- **Timezone Library**: Native Python `zoneinfo` (fallback to `pytz`)
+- **System Tray Bridger**: `pystray` + `Pillow`
+
+## 4. Required Assets Structure
+- `assets/alarms/` - Audio tone files (e.g. `chime.wav`, `alarm_tone.mp3`)
+- `assets/icons/` - Application logo and system tray icons (.ico, .png)
