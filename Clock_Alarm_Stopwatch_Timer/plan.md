@@ -26,3 +26,11 @@ A modern, highly accurate utility desktop clock application built in Python, fea
 ## 4. Required Assets Structure
 - `assets/alarms/` - Audio tone files (e.g. `chime.wav`, `alarm_tone.mp3`)
 - `assets/icons/` - Application logo and system tray icons (.ico, .png)
+
+## 5. UI/UX Style Guide
+- **Visual Themes**:
+  - *Dark Cyberpunk*: Background (`#09090E`), Primary Accent (`#EC4899` - Hot Pink), Secondary Accent (`#06B6D4` - Cyber Cyan).
+  - *Light Minimalist*: Background (`#F9FAFB`), Primary Accent (`#3B82F6` - Royal Blue).
+- **Core Views Layout**:
+  - Main dial displaying current local time in large digital format.
+  - Slide panels to toggle between Stopwatch (with split laps table), Timer presets, World Clock list, and Alarm schedule list.
