@@ -45,3 +45,19 @@ A modern, highly accurate utility desktop clock application built in Python, fea
 To ensure the application retains scheduled alarms, favorite world clocks, and user settings across restarts, a local configuration serialization system will be designed.
 - **Data format**: JSON file representation (`settings.json`).
 - **Location**: Packaged in the root directory under `config/settings.json`.
+- **Data Schema**:
+  ```json
+  {
+    "active_theme": "Dark Cyberpunk",
+    "alarms": [
+      {
+        "id": "alarm_01",
+        "time": "07:30",
+        "repeat": ["Monday", "Wednesday", "Friday"],
+        "tone": "chime.wav",
+        "enabled": true
+      }
+    ],
+    "world_clocks": ["UTC", "America/New_York", "Asia/Tokyo"]
+  }
+  ```
