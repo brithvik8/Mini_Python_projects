@@ -39,3 +39,9 @@ A modern, highly accurate utility desktop clock application built in Python, fea
 - **Avoiding Clock Drift**: The UI loop updates text values every 100ms, but instead of incrementing a local integer counter, it polls the actual system time via `datetime.now()` to prevent processing delays from causing time drift.
 - **Asynchronous Audio Threading**: Alarm chimes are triggered in an isolated background thread to prevent the main GUI loop from blocking or hanging while playing audio files.
 - **Always-On-Top State**: Uses the window flag `-topmost` to enable a floating overlay mode so users can keep the stopwatch or timer visible on top of full-screen work files.
+
+
+## 7. Extended Specs: Alarm State & Settings Persistence (Day 1)
+To ensure the application retains scheduled alarms, favorite world clocks, and user settings across restarts, a local configuration serialization system will be designed.
+- **Data format**: JSON file representation (`settings.json`).
+- **Location**: Packaged in the root directory under `config/settings.json`.
