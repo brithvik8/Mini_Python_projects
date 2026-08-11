@@ -61,3 +61,6 @@ To ensure the application retains scheduled alarms, favorite world clocks, and u
     "world_clocks": ["UTC", "America/New_York", "Asia/Tokyo"]
   }
   ```
+- **Trigger Events**:
+  - **Save events**: Triggered automatically whenever an alarm is toggled, created, deleted, or when the theme preference changes.
+  - **Load events**: Triggered during application initialization (`__init__` sequence of the Main Window) to mount current configuration states.
