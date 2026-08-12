@@ -73,3 +73,10 @@ To guarantee that alarm alerts always sound even in the event of missing or corr
   1. Attempt to play user selected tone (`user_alarm.mp3`).
   2. If file missing, fall back to default tone packaged with app (`assets/alarms/chime.wav`).
   3. If default wav file is missing/inaccessible, execute system hardware buzzer fallback.
+- **Hardware Beep Code**:
+  - Leverages Python's native `winsound.Beep` on Windows:
+    ```python
+    import winsound
+    winsound.Beep(frequency=1000, duration=1000)
+    ```
+  - This ensures a physical alert sounds using the motherboard/OS buzzer if the sound card is locked or file access fails.
