@@ -64,3 +64,8 @@ To ensure the application retains scheduled alarms, favorite world clocks, and u
 - **Trigger Events**:
   - **Save events**: Triggered automatically whenever an alarm is toggled, created, deleted, or when the theme preference changes.
   - **Load events**: Triggered during application initialization (`__init__` sequence of the Main Window) to mount current configuration states.
+
+
+## 8. Extended Specs: Audio Fail-Safe & Fallback Engine (Day 2)
+To guarantee that alarm alerts always sound even in the event of missing or corrupted files, a fallback audio validation tree is established.
+- **Pre-play Check**: The system validates the absolute path of the chosen audio file prior to initiating playback.
