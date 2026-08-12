@@ -69,3 +69,7 @@ To ensure the application retains scheduled alarms, favorite world clocks, and u
 ## 8. Extended Specs: Audio Fail-Safe & Fallback Engine (Day 2)
 To guarantee that alarm alerts always sound even in the event of missing or corrupted files, a fallback audio validation tree is established.
 - **Pre-play Check**: The system validates the absolute path of the chosen audio file prior to initiating playback.
+- **Fallback Tree**:
+  1. Attempt to play user selected tone (`user_alarm.mp3`).
+  2. If file missing, fall back to default tone packaged with app (`assets/alarms/chime.wav`).
+  3. If default wav file is missing/inaccessible, execute system hardware buzzer fallback.
