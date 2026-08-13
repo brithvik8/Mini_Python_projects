@@ -90,3 +90,5 @@ A gradual wake-up experience and snooze function will be designed to enhance the
     - Initial volume setting: `0.1` (10%).
     - Automatically increment volume by `0.1` every 3 seconds.
     - Max volume limit: `1.0` (100% after 30 seconds of play).
+- **Auto-Snooze Timeout**:
+  - To prevent continuous audio playing if the user is away, the audio player will automatically stop and snooze after 10 minutes of continuous alert ring state.
