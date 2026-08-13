@@ -80,3 +80,8 @@ To guarantee that alarm alerts always sound even in the event of missing or corr
     winsound.Beep(frequency=1000, duration=1000)
     ```
   - This ensures a physical alert sounds using the motherboard/OS buzzer if the sound card is locked or file access fails.
+
+
+## 9. Extended Specs: Alarm Snooze & Volume Fade-In (Day 3)
+A gradual wake-up experience and snooze function will be designed to enhance the sleep utility dashboard.
+- **Snooze Logic**: When the alarm window triggers, clicking 'Snooze' adds a delayed alarm event (5 or 10 minutes offset) to the queue and shuts down the active audio player.
