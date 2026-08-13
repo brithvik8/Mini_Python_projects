@@ -85,3 +85,8 @@ To guarantee that alarm alerts always sound even in the event of missing or corr
 ## 9. Extended Specs: Alarm Snooze & Volume Fade-In (Day 3)
 A gradual wake-up experience and snooze function will be designed to enhance the sleep utility dashboard.
 - **Snooze Logic**: When the alarm window triggers, clicking 'Snooze' adds a delayed alarm event (5 or 10 minutes offset) to the queue and shuts down the active audio player.
+- **Progressive Volume Ramping**:
+  - Prevents sudden loud alarms by ramping up volume levels:
+    - Initial volume setting: `0.1` (10%).
+    - Automatically increment volume by `0.1` every 3 seconds.
+    - Max volume limit: `1.0` (100% after 30 seconds of play).
