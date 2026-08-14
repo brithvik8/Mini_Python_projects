@@ -102,3 +102,9 @@ For users who wish to keep their stopwatch or count-down timer visible while wor
     - Always-on-top: `self.attributes("-topmost", True)`.
     - Borderless: `self.overrideredirect(True)`.
     - Transparency alpha background: `self.attributes("-alpha", 0.85)`.
+- **Drag-to-Move bindings**:
+  - Since the title bar is removed, mouse bind triggers are set to reposition the window coordinate axes:
+    ```python
+    self.bind("<Button-1>", self.start_drag)
+    self.bind("<B1-Motion>", self.drag_window)
+    ```
