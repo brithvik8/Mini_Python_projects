@@ -92,3 +92,8 @@ A gradual wake-up experience and snooze function will be designed to enhance the
     - Max volume limit: `1.0` (100% after 30 seconds of play).
 - **Auto-Snooze Timeout**:
   - To prevent continuous audio playing if the user is away, the audio player will automatically stop and snooze after 10 minutes of continuous alert ring state.
+
+
+## 10. Extended Specs: Compact Overlay Mini-Widget (Day 4)
+For users who wish to keep their stopwatch or count-down timer visible while working in other full-screen apps, a floating overlay view is implemented.
+- **Mini layout toggle**: Clicking the icon in the header switches the GUI style sheet.
