@@ -97,3 +97,8 @@ A gradual wake-up experience and snooze function will be designed to enhance the
 ## 10. Extended Specs: Compact Overlay Mini-Widget (Day 4)
 For users who wish to keep their stopwatch or count-down timer visible while working in other full-screen apps, a floating overlay view is implemented.
 - **Mini layout toggle**: Clicking the icon in the header switches the GUI style sheet.
+- **Glassmorphism Attributes**:
+  - Sets window flags to override title borders:
+    - Always-on-top: `self.attributes("-topmost", True)`.
+    - Borderless: `self.overrideredirect(True)`.
+    - Transparency alpha background: `self.attributes("-alpha", 0.85)`.
