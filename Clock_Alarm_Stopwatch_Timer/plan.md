@@ -108,3 +108,8 @@ For users who wish to keep their stopwatch or count-down timer visible while wor
     self.bind("<Button-1>", self.start_drag)
     self.bind("<B1-Motion>", self.drag_window)
     ```
+
+
+## 11. Extended Specs: High-Resolution Timing & Thread safety (Day 5)
+Precise timing measurements require bypassing typical scheduling lag issues in standard UI loops.
+- **Eliminating Time Drift**: The stopwatch avoids using local counter increments which accumulate delay.
