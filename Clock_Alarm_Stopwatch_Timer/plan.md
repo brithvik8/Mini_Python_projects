@@ -113,3 +113,9 @@ For users who wish to keep their stopwatch or count-down timer visible while wor
 ## 11. Extended Specs: High-Resolution Timing & Thread safety (Day 5)
 Precise timing measurements require bypassing typical scheduling lag issues in standard UI loops.
 - **Eliminating Time Drift**: The stopwatch avoids using local counter increments which accumulate delay.
+- **Delta Timestamp Calculations**:
+  - Measures absolute timing differences using high-precision performance counters:
+    ```python
+    elapsed_time = time.perf_counter() - self.start_time
+    ```
+  - This ensures sub-millisecond precision unaffected by GUI refresh loads.
