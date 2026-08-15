@@ -119,3 +119,5 @@ Precise timing measurements require bypassing typical scheduling lag issues in s
     elapsed_time = time.perf_counter() - self.start_time
     ```
   - This ensures sub-millisecond precision unaffected by GUI refresh loads.
+- **Thread Safety**:
+  - Background audio worker processes and timing loops use thread-safe flags to interface with CustomTkinter labels, preventing UI thread blockages and racing condition errors.
