@@ -8,3 +8,14 @@ A responsive desktop currency converter application that pulls real-time exchang
 - Platform: Cross-platform (Windows/macOS/Linux)
 - Storage: Local SQLite database for offline rate caching and historical trend logging.
 - External APIs: Exchangerate.host or ExchangeRate-API (fallback).
+## 3. Development Milestones
+- **Milestone 1: Exchange Rate API Integration**
+  - Integrate requests handler for exchange rate APIs with validation.
+- **Milestone 2: Database Storage & Caching Layer**
+  - Design SQL schema for caching rates and logging historical data.
+- **Milestone 3: Core Conversion Logic Engine**
+  - Write high-precision conversion calculation math supporting multiple decimal precision configurations.
+- **Milestone 4: Modern GUI & Interactivity**
+  - Construct UI using CustomTkinter with search capabilities.
+- **Milestone 5: Matplotlib Visualization Charts**
+  - Integrate trend charts visualizing currency rate shifts over 7, 30, and 90 days.
