@@ -19,3 +19,8 @@ A responsive desktop currency converter application that pulls real-time exchang
   - Construct UI using CustomTkinter with search capabilities.
 - **Milestone 5: Matplotlib Visualization Charts**
   - Integrate trend charts visualizing currency rate shifts over 7, 30, and 90 days.
+## 4. Technical Stack
+- **GUI**: `CustomTkinter`
+- **HTTP Client**: `requests`
+- **Plotting/Charts**: `matplotlib`
+- **Database**: `sqlite3`
