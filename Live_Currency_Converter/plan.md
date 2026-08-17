@@ -24,3 +24,8 @@ A responsive desktop currency converter application that pulls real-time exchang
 - **HTTP Client**: `requests`
 - **Plotting/Charts**: `matplotlib`
 - **Database**: `sqlite3`
+
+## 5. Specs: API Integration & Request Caching
+To fetch real-time conversion rates without hitting rate limits, a secure API connection manager is established.
+- **Endpoint Structure**: Requests are formatted dynamically:
+  `https://open.er-api.com/v6/latest/{BASE_CURRENCY}`
