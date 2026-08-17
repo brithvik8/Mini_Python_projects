@@ -32,3 +32,6 @@ To fetch real-time conversion rates without hitting rate limits, a secure API co
 - **HTTP Exception Handling**:
   - Timeout limit: `5.0` seconds.
   - Retries: Progressive backoff retry handler (1s, 2s, 4s) up to 3 times before loading cached rates from SQLite.
+- **Cache Expiry Model**:
+  - Fetch payload includes standard metadata field `time_next_update_unix`.
+  - Local checks verify if `current_time_unix >= time_next_update_unix` to avoid redundant API queries.
