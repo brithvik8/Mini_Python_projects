@@ -29,3 +29,6 @@ A responsive desktop currency converter application that pulls real-time exchang
 To fetch real-time conversion rates without hitting rate limits, a secure API connection manager is established.
 - **Endpoint Structure**: Requests are formatted dynamically:
   `https://open.er-api.com/v6/latest/{BASE_CURRENCY}`
+- **HTTP Exception Handling**:
+  - Timeout limit: `5.0` seconds.
+  - Retries: Progressive backoff retry handler (1s, 2s, 4s) up to 3 times before loading cached rates from SQLite.
