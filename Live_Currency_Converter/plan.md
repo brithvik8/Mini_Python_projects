@@ -48,3 +48,11 @@ A robust local SQLite database is utilized to ensure functionality when internet
       PRIMARY KEY (base, target)
   );
   ```
+  ```sql
+  CREATE TABLE IF NOT EXISTS rate_history (
+      base TEXT,
+      target TEXT,
+      rate REAL,
+      timestamp INTEGER
+  );
+  ```
