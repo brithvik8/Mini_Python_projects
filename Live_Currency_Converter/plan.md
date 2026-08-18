@@ -56,3 +56,7 @@ A robust local SQLite database is utilized to ensure functionality when internet
       timestamp INTEGER
   );
   ```
+- **Offline Warning Indicators**:
+  - If network check fails, the GUI changes state:
+    - Status label displays: "Offline Mode — Using Cached Rates from {last_updated}".
+    - Search entry fields remain interactive with local SQLite lookup.
