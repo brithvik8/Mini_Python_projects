@@ -35,3 +35,16 @@ To fetch real-time conversion rates without hitting rate limits, a secure API co
 - **Cache Expiry Model**:
   - Fetch payload includes standard metadata field `time_next_update_unix`.
   - Local checks verify if `current_time_unix >= time_next_update_unix` to avoid redundant API queries.
+
+## 6. Specs: Offline Fallback & Historical Data Store
+A robust local SQLite database is utilized to ensure functionality when internet connection is lost.
+- **Database schema**:
+  ```sql
+  CREATE TABLE IF NOT EXISTS exchange_rates (
+      base TEXT,
+      target TEXT,
+      rate REAL,
+      last_updated INTEGER,
+      PRIMARY KEY (base, target)
+  );
+  ```
