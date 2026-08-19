@@ -60,3 +60,7 @@ A robust local SQLite database is utilized to ensure functionality when internet
   - If network check fails, the GUI changes state:
     - Status label displays: "Offline Mode — Using Cached Rates from {last_updated}".
     - Search entry fields remain interactive with local SQLite lookup.
+
+## 7. Specs: Multi-Currency Conversion Logic & Precision Handling
+To prevent float inaccuracies in monetary mathematics, a strict numerical precision engine is implemented.
+- **Precision Standard**: Uses Python's native `decimal.Decimal` module for all financial operations.
