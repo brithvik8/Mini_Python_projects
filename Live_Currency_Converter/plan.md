@@ -67,3 +67,6 @@ To prevent float inaccuracies in monetary mathematics, a strict numerical precis
 - **Decimal Precision Settings**:
   - Default precision setting: `4` decimal places (e.g. 1.1234).
   - Extended precision setting: Up to `8` decimal places for cryptocurrencies or low-value pairs.
+- **Triangular Conversion Rule**:
+  - If direct pairing rate is unavailable, conversion is calculated dynamically through USD base rate:
+    `Rate(A -> B) = Rate(A -> USD) * Rate(USD -> B)`
