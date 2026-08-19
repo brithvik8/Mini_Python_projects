@@ -64,3 +64,6 @@ A robust local SQLite database is utilized to ensure functionality when internet
 ## 7. Specs: Multi-Currency Conversion Logic & Precision Handling
 To prevent float inaccuracies in monetary mathematics, a strict numerical precision engine is implemented.
 - **Precision Standard**: Uses Python's native `decimal.Decimal` module for all financial operations.
+- **Decimal Precision Settings**:
+  - Default precision setting: `4` decimal places (e.g. 1.1234).
+  - Extended precision setting: Up to `8` decimal places for cryptocurrencies or low-value pairs.
