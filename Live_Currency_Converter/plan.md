@@ -84,3 +84,5 @@ A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
     `self.target_dropdown.configure(values=[c for c in ALL_CURRENCIES if query.upper() in c])`
 - **Matplotlib Canvas Widget**:
   - Embedded canvas plots rate trends over time.
+- **Grid Scaling**:
+  - Features dynamic grid scaling based on minimum and maximum rates in the query timeframe.
