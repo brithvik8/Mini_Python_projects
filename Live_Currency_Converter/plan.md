@@ -70,3 +70,10 @@ To prevent float inaccuracies in monetary mathematics, a strict numerical precis
 - **Triangular Conversion Rule**:
   - If direct pairing rate is unavailable, conversion is calculated dynamically through USD base rate:
     `Rate(A -> B) = Rate(A -> USD) * Rate(USD -> B)`
+
+## 8. Specs: GUI Layout & Live Search
+A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
+- **Dashboard Colors**:
+  - Background: Midnight forest green (`#081C15`)
+  - Main Panel: Emerald accents (`#1B4332`)
+  - Buttons: Mint green highlights (`#40916C`)
