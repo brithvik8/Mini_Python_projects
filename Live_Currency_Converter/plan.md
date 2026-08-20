@@ -82,3 +82,5 @@ A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
 - **Dynamic Bindings**:
   - Uses list item bindings:
     `self.target_dropdown.configure(values=[c for c in ALL_CURRENCIES if query.upper() in c])`
+- **Matplotlib Canvas Widget**:
+  - Embedded canvas plots rate trends over time.
