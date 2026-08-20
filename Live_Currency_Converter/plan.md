@@ -77,3 +77,5 @@ A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
   - Background: Midnight forest green (`#081C15`)
   - Main Panel: Emerald accents (`#1B4332`)
   - Buttons: Mint green highlights (`#40916C`)
+- **Search Filters**:
+  - Selection lists include filter search entry.
