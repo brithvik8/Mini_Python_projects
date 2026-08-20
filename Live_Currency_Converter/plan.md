@@ -79,3 +79,6 @@ A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
   - Buttons: Mint green highlights (`#40916C`)
 - **Search Filters**:
   - Selection lists include filter search entry.
+- **Dynamic Bindings**:
+  - Uses list item bindings:
+    `self.target_dropdown.configure(values=[c for c in ALL_CURRENCIES if query.upper() in c])`
