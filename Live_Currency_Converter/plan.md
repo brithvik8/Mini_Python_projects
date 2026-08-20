@@ -86,3 +86,5 @@ A beautiful CustomTkinter layout utilizing an Emerald Mint color theme.
   - Embedded canvas plots rate trends over time.
 - **Grid Scaling**:
   - Features dynamic grid scaling based on minimum and maximum rates in the query timeframe.
+- **Data Export capabilities**:
+  - Adds button to export queried historical rate trends to a local CSV file.
