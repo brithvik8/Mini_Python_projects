@@ -19,3 +19,7 @@ A robust, modern desktop inventory manager designed for game items, gear, assets
   - Build data serializations to export stock reports to CSV/JSON format.
 - **Milestone 5: Interactive GUI Layout**
   - Develop visual layout panels showing item rarity color highlights.
+## 4. Technical Stack
+- **GUI**: `CustomTkinter`
+- **Database**: `sqlite3`
+- **Report generation**: `csv`, `json` modules
