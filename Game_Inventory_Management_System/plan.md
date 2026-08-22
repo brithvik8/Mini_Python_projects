@@ -39,3 +39,13 @@ To ensure data consistency and integrity, a structured SQLite database schema is
       price REAL
   );
   ```
+  ```sql
+  CREATE TABLE IF NOT EXISTS audit_logs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      item_id INTEGER,
+      change_type TEXT,
+      quantity_delta INTEGER,
+      timestamp INTEGER,
+      FOREIGN KEY(item_id) REFERENCES inventory_items(id)
+  );
+  ```
