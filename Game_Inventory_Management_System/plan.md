@@ -49,3 +49,6 @@ To ensure data consistency and integrity, a structured SQLite database schema is
       FOREIGN KEY(item_id) REFERENCES inventory_items(id)
   );
   ```
+- **ACID Transaction Safeguards**:
+  - Database helper routines run inside explicit `WITH conn:` contexts.
+  - Automatic rollbacks are executed on SQL errors to prevent partial modifications.
