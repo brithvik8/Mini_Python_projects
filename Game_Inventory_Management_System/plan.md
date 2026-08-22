@@ -23,3 +23,19 @@ A robust, modern desktop inventory manager designed for game items, gear, assets
 - **GUI**: `CustomTkinter`
 - **Database**: `sqlite3`
 - **Report generation**: `csv`, `json` modules
+
+## 5. Specs: SQLite Database Schema & Transaction Models
+To ensure data consistency and integrity, a structured SQLite database schema is designed.
+- **Schema structure**:
+  ```sql
+  CREATE TABLE IF NOT EXISTS inventory_items (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      sku TEXT UNIQUE,
+      category TEXT,
+      rarity TEXT,
+      quantity INTEGER DEFAULT 0,
+      threshold INTEGER DEFAULT 5,
+      price REAL
+  );
+  ```
