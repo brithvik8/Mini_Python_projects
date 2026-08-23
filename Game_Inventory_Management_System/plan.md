@@ -60,3 +60,9 @@ Handling search queries over large inventories requires performant indices and S
   SELECT * FROM inventory_items 
   WHERE name LIKE :query OR sku LIKE :query
   ```
+- **Multi-Level Filters**:
+  - Search queries are combined dynamically:
+    ```sql
+    SELECT * FROM inventory_items 
+    WHERE (name LIKE :query) AND rarity = :rarity AND quantity <= :quantity_limit
+    ```
