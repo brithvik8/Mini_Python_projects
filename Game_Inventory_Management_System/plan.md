@@ -52,3 +52,11 @@ To ensure data consistency and integrity, a structured SQLite database schema is
 - **ACID Transaction Safeguards**:
   - Database helper routines run inside explicit `WITH conn:` contexts.
   - Automatic rollbacks are executed on SQL errors to prevent partial modifications.
+
+## 6. Specs: Search, Filtering, and Pagination Logic
+Handling search queries over large inventories requires performant indices and SQL constraints.
+- **Query Search Logic**:
+  ```sql
+  SELECT * FROM inventory_items 
+  WHERE name LIKE :query OR sku LIKE :query
+  ```
