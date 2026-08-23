@@ -66,3 +66,6 @@ Handling search queries over large inventories requires performant indices and S
     SELECT * FROM inventory_items 
     WHERE (name LIKE :query) AND rarity = :rarity AND quantity <= :quantity_limit
     ```
+- **Cursor-Based Pagination**:
+  - Displays maximum `50` items per page.
+  - Uses `LIMIT 50 OFFSET :offset` clause to prevent system UI memory overhead.
