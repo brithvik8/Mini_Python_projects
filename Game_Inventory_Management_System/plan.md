@@ -69,3 +69,6 @@ Handling search queries over large inventories requires performant indices and S
 - **Cursor-Based Pagination**:
   - Displays maximum `50` items per page.
   - Uses `LIMIT 50 OFFSET :offset` clause to prevent system UI memory overhead.
+
+## 7. Specs: Low Stock Alerts & Automated Notifications
+To maintain operational efficiency, a threshold monitoring engine checks stock bounds.
