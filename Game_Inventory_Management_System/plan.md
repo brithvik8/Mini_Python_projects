@@ -74,3 +74,6 @@ Handling search queries over large inventories requires performant indices and S
 To maintain operational efficiency, a threshold monitoring engine checks stock bounds.
 - **Trigger condition**: Executed whenever quantity is decremented.
   `if quantity < threshold: trigger_alert()`
+- **Notification Alert GUI**:
+  - Changes background panel color to alert crimson: `#EF4444`.
+  - Displays text badge: "CRITICAL: STOCK LOW".
