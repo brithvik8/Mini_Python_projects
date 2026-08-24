@@ -72,3 +72,5 @@ Handling search queries over large inventories requires performant indices and S
 
 ## 7. Specs: Low Stock Alerts & Automated Notifications
 To maintain operational efficiency, a threshold monitoring engine checks stock bounds.
+- **Trigger condition**: Executed whenever quantity is decremented.
+  `if quantity < threshold: trigger_alert()`
