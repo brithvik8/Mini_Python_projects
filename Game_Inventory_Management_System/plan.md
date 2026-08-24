@@ -77,3 +77,5 @@ To maintain operational efficiency, a threshold monitoring engine checks stock b
 - **Notification Alert GUI**:
   - Changes background panel color to alert crimson: `#EF4444`.
   - Displays text badge: "CRITICAL: STOCK LOW".
+- **Auto-Restock Request Generator**:
+  - Spawns draft purchase request files in CSV format inside `restock_requests/` directory containing item details and replenishment order targets.
