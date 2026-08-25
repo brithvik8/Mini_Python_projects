@@ -79,3 +79,7 @@ To maintain operational efficiency, a threshold monitoring engine checks stock b
   - Displays text badge: "CRITICAL: STOCK LOW".
 - **Auto-Restock Request Generator**:
   - Spawns draft purchase request files in CSV format inside `restock_requests/` directory containing item details and replenishment order targets.
+
+## 8. Specs: Data Import/Export & Report Generation
+To interface with external systems, modular serialization handlers are defined.
+- **Export format standard**: UTF-8 encoded CSV reporting.
