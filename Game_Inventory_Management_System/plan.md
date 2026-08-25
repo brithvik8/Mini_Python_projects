@@ -83,3 +83,6 @@ To maintain operational efficiency, a threshold monitoring engine checks stock b
 ## 8. Specs: Data Import/Export & Report Generation
 To interface with external systems, modular serialization handlers are defined.
 - **Export format standard**: UTF-8 encoded CSV reporting.
+- **Import Validation Steps**:
+  - Prior to appending CSV contents, database records verify header presence and integrity.
+  - Incorrect rows are flagged, logged to `import_errors.log`, and skipped.
