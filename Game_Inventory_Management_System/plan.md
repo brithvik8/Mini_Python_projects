@@ -86,3 +86,5 @@ To interface with external systems, modular serialization handlers are defined.
 - **Import Validation Steps**:
   - Prior to appending CSV contents, database records verify header presence and integrity.
   - Incorrect rows are flagged, logged to `import_errors.log`, and skipped.
+- **Report JSON Export schema**:
+  - Generates snapshot metadata including total inventory valuation, category distribution counts, and timestamp signatures.
