@@ -59,3 +59,6 @@ A highly secure, offline password manager featuring Master Password entry, crypt
 ## 8. Extended Specs: Cryptographic Engine & Salt/Key Derivation Security (Day 11)
 To strengthen password storage protection, PBKDF2HMAC is configured with strict iterations.
 - **Key derivation scheme**: Uses PBKDF2 with SHA-256 hash.
+- **Cryptographic Strength Parameters**:
+  - Iterations count: `600,000` cycles.
+  - Salt size: `16` bytes (randomly generated using `os.urandom`).
