@@ -62,3 +62,5 @@ To strengthen password storage protection, PBKDF2HMAC is configured with strict 
 - **Cryptographic Strength Parameters**:
   - Iterations count: `600,000` cycles.
   - Salt size: `16` bytes (randomly generated using `os.urandom`).
+- **Decryption verifier check**:
+  - Derives verifier hash during login to validate correctness without decrypting credentials.
