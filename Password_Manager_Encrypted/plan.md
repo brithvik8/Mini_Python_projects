@@ -68,3 +68,6 @@ To strengthen password storage protection, PBKDF2HMAC is configured with strict 
 ## 9. Extended Specs: Database Encryption Layer & Secure SQL Queries (Day 12)
 Each stored credential is encrypted individually before SQL execution.
 - **AES-256 encryption standard**: CBC mode with randomized initialization vector (IV) of `16` bytes.
+- **Ciphertext format**:
+  - The payload stored in SQLite BLOB contains:
+    `IV (16 bytes) + Encrypted Ciphertext`
