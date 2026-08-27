@@ -71,3 +71,6 @@ Each stored credential is encrypted individually before SQL execution.
 - **Ciphertext format**:
   - The payload stored in SQLite BLOB contains:
     `IV (16 bytes) + Encrypted Ciphertext`
+- **SQL parameterization bounds**:
+  - All SQLite calls explicitly map parameters to avoid injection hazards:
+    `execute("INSERT INTO credentials (site_name, username, encrypted_password) VALUES (?, ?, ?)", (site, user, blob))`
