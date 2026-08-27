@@ -64,3 +64,7 @@ To strengthen password storage protection, PBKDF2HMAC is configured with strict 
   - Salt size: `16` bytes (randomly generated using `os.urandom`).
 - **Decryption verifier check**:
   - Derives verifier hash during login to validate correctness without decrypting credentials.
+
+## 9. Extended Specs: Database Encryption Layer & Secure SQL Queries (Day 12)
+Each stored credential is encrypted individually before SQL execution.
+- **AES-256 encryption standard**: CBC mode with randomized initialization vector (IV) of `16` bytes.
