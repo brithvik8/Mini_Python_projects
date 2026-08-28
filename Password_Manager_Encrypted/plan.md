@@ -74,3 +74,8 @@ Each stored credential is encrypted individually before SQL execution.
 - **SQL parameterization bounds**:
   - All SQLite calls explicitly map parameters to avoid injection hazards:
     `execute("INSERT INTO credentials (site_name, username, encrypted_password) VALUES (?, ?, ?)", (site, user, blob))`
+
+## 10. Extended Specs: Zero-Knowledge Session Security (Day 13)
+Decryption keys must never touch persistence stores.
+- **Memory safety policy**:
+  - The derived key resides strictly in memory and is deleted via garbage collection when closing vault.
