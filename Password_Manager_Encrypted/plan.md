@@ -79,3 +79,9 @@ Each stored credential is encrypted individually before SQL execution.
 Decryption keys must never touch persistence stores.
 - **Memory safety policy**:
   - The derived key resides strictly in memory and is deleted via garbage collection when closing vault.
+- **Failed Login Lockout Rule**:
+  - Tracks invalid attempts.
+  - Maximum limit: `5` attempts.
+- **Progressive lock penalty**:
+  - Restricts database access.
+  - Adds delay of `5 * (attempts - 4)` seconds between subsequent requests.
