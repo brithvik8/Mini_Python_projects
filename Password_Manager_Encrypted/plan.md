@@ -90,3 +90,5 @@ Decryption keys must never touch persistence stores.
 Copied passwords present security threats in shared system clipboards.
 - **Auto-Clear daemon thread**:
   - Launches background timer thread on copy: `threading.Timer(30.0, self.clear_clipboard).start()`
+- **Clipboard verification checks**:
+  - Before wiping, the timer thread verifies the clipboard string matches the copied password. This avoids wiping new strings manually copied by the user.
