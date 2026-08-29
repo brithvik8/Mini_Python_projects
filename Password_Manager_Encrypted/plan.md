@@ -85,3 +85,8 @@ Decryption keys must never touch persistence stores.
 - **Progressive lock penalty**:
   - Restricts database access.
   - Adds delay of `5 * (attempts - 4)` seconds between subsequent requests.
+
+## 11. Extended Specs: Clipboard Protection & Compilation (Day 14)
+Copied passwords present security threats in shared system clipboards.
+- **Auto-Clear daemon thread**:
+  - Launches background timer thread on copy: `threading.Timer(30.0, self.clear_clipboard).start()`
