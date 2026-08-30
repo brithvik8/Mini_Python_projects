@@ -1,24 +1,16 @@
-import sqlite3
-import time
-from .config import DB_PATH
+from .config import inventory_db
 
 def add_item(name, sku, category, rarity, quantity, threshold, price):
-    with sqlite3.connect(DB_PATH) as conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute("""
-                INSERT INTO inventory_items (name, sku, category, rarity, quantity, threshold, price)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (name, sku, category, rarity, quantity, threshold, price))
-            item_id = cursor.lastrowid
-            
-            cursor.execute("""
-                INSERT INTO audit_logs (item_id, change_type, quantity_delta, timestamp)
-                VALUES (?, 'INITIAL_ADD', ?, ?)
-            """, (item_id, quantity, int(time.time())))
-            conn.commit()
-            return True
-        except sqlite3.IntegrityError as e:
-            print(f"SKU violation or integrity error: {e}")
-            conn.rollback()
-            return False
+    if sku in inventory_db:
+        print(f"Error: Item with SKU {sku} already exists.")
+        return False
+    
+    inventory_db[sku] = {
+        "name": name,
+        "category": category,
+        "rarity": rarity,
+        "quantity": quantity,
+        "threshold": threshold,
+        "price": price
+    }
+    return True

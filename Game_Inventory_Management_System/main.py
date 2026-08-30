@@ -1,7 +1,7 @@
 import game_inventory
 
 def main():
-    game_inventory.init_db()
+    game_inventory.init_inventory()
     
     print("Adding items...")
     game_inventory.add_item(
@@ -25,10 +25,10 @@ def main():
     )
     
     print("\nChecking inventory stock alerts:")
-    game_inventory.check_item_alert(item_id=2)
+    game_inventory.check_item_alert(sku="POT-HEAL-002")
     
     print("\nUpdating stock (using Health Potion)...")
-    game_inventory.update_stock(item_id=2, quantity_delta=5)
+    game_inventory.update_stock(sku="POT-HEAL-002", quantity_delta=5)
     
     print("\nQuerying weapons in inventory:")
     items = game_inventory.query_inventory(search_query="Sword", rarity="Epic")
