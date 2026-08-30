@@ -8,3 +8,6 @@ dist/
 build/
 *.exe
 *.spec
+# Databases and generated data directories
+*.db
+restock_requests/
