@@ -11,3 +11,5 @@ build/
 # Databases and generated data directories
 *.db
 restock_requests/
+restock_*.txt
+
