@@ -1,11 +1,11 @@
 # 1. Local Database (In-Memory Dictionary)
 inventory_db = {}
 
-# 2. Database Initialization
+# 2. Initialization of Database
 def init_inventory():
     inventory_db.clear()
 
-# 3. Add Item
+# 3. Adding Item
 def add_item(name, item_code, category, rarity, quantity, threshold, price):
     if item_code in inventory_db:
         print(f"Error: Item with code {item_code} already exists.")
@@ -21,7 +21,7 @@ def add_item(name, item_code, category, rarity, quantity, threshold, price):
     }
     return True
 
-# 4. Generate Restock Request
+# 4. Generating Restock Request
 def generate_restock_request(name, item_code, order_qty):
     filepath = f"restock_{item_code}.txt"
     with open(filepath, "w", encoding="utf-8") as f:
@@ -29,7 +29,7 @@ def generate_restock_request(name, item_code, order_qty):
         f.write(f"Item Name: {name}\n")
         f.write(f"Order Quantity: {order_qty}\n")
 
-# 5. Check Alerts
+# 5. Checking Alerts
 def check_item_alert(item_code):
     if item_code in inventory_db:
         item = inventory_db[item_code]
@@ -37,7 +37,7 @@ def check_item_alert(item_code):
             print(f"[WARNING] CRITICAL ALERT: '{item['name']}' ({item_code}) is low on stock! (Current: {item['quantity']}, Threshold: {item['threshold']})")
             generate_restock_request(item["name"], item_code, item["threshold"] * 2)
 
-# 6. Update Stock
+# 6. Updating Stock
 def update_stock(item_code, quantity_delta):
     if item_code not in inventory_db:
         print(f"Error: Item code {item_code} not found.")
