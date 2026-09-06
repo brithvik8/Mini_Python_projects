@@ -1,6 +1,6 @@
 """
 Modern Desktop Clock Suite
-Skeleton: Imports, Alert Helper, Clock, Alarm, and Stopwatch Skeleton
+Skeleton: Complete Application Skeleton with Main Entrypoint
 """
 
 import tkinter as tk
@@ -101,3 +101,37 @@ class ClockSuiteApp(tk.Tk):
     def _update_stopwatch_loop(self):
         """Stopwatch high-resolution tick loop."""
         pass
+
+    # --- Feature 4: Countdown Timer ---
+    def _build_timer_tab(self):
+        """Construct countdown timer UI tab."""
+        pass
+
+    def _set_timer_preset(self, minutes):
+        """Set quick countdown preset."""
+        pass
+
+    def _toggle_timer(self):
+        """Start or pause countdown timer."""
+        pass
+
+    def _reset_timer(self):
+        """Reset countdown timer."""
+        pass
+
+    def _update_timer_loop(self):
+        """Second-by-second countdown tick loop."""
+        pass
+
+
+# =====================================================================
+# 3. Main Launcher Entrypoint
+# =====================================================================
+def main():
+    """Application main entry point."""
+    app = ClockSuiteApp()
+    # app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
