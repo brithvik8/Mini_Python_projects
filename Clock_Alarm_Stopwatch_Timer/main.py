@@ -1,6 +1,6 @@
 """
 Modern Desktop Clock Suite
-Skeleton: Imports, Alert Helper, Clock, and Alarm Skeleton
+Skeleton: Imports, Alert Helper, Clock, Alarm, and Stopwatch Skeleton
 """
 
 import tkinter as tk
@@ -75,4 +75,29 @@ class ClockSuiteApp(tk.Tk):
 
     def _trigger_alarm_alert(self, alarm):
         """Trigger audio and dialog alert on alarm match."""
+        pass
+
+    # --- Feature 3: Stopwatch with Lap Recorder ---
+    def _build_stopwatch_tab(self):
+        """Construct stopwatch UI tab."""
+        pass
+
+    def _format_stopwatch_time(self, seconds_float):
+        """Format seconds to HH:MM:SS.ss string."""
+        pass
+
+    def _toggle_stopwatch(self):
+        """Start or pause stopwatch."""
+        pass
+
+    def _record_stopwatch_lap(self):
+        """Record split lap time."""
+        pass
+
+    def _reset_stopwatch(self):
+        """Reset stopwatch timer and clear laps."""
+        pass
+
+    def _update_stopwatch_loop(self):
+        """Stopwatch high-resolution tick loop."""
         pass
