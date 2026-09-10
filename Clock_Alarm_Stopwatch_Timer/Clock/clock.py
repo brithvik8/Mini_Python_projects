@@ -1,4 +1,3 @@
-
 from tkinter import * 
 from time import *
 
@@ -14,7 +13,6 @@ def update():
 
     window.after(1000, update)
     
-
 window = Tk()
 
 time_label = Label(window,font=("Arial",50,"bold"),foreground="light blue",background="black")
