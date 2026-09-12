@@ -6,6 +6,7 @@ for i in range(timer,0,-1):
     sec = i%60
     min = int(i/60)%60
     hr = int(i/3600)
+    #day = int(i/7)
 
     print(f"{hr}:{min}:{sec}")
     time.sleep(1)
